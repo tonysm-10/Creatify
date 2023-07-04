@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
-import { CREATE_PRODUCT, UPDATE_PRODUCT, DELETE_PRODUCT } from '../../utils/mutations';
+import { CREATE_PRODUCT, DELETE_PRODUCT } from '../../utils/mutations';
 import './Carousel.scss';
 import { QUERY_USER} from '../../utils/queries';
 
@@ -35,7 +35,7 @@ const ProductForm = ({ product, onUpdate, onDelete }) => {
   const [values, setValues] = useState(initialValues);
 
   const [createProduct] = useMutation(CREATE_PRODUCT);
-  const [updateProduct] = useMutation(UPDATE_PRODUCT);
+  // const [updateProduct] = useMutation(UPDATE_PRODUCT);
   const [deleteProduct] = useMutation(DELETE_PRODUCT);
 
   const [currentIndex, setCurrentIndex] = useState(0);
